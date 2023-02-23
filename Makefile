@@ -1,13 +1,10 @@
-CROSS_COMPILE ?= aarch64-linux-gnu-
-CC := ${CROSS_COMPILE}gcc
-LD := ${CROSS_COMPILE}ld
-object = transmit.o transelect.o transmit2_one_fd.o transmit2_two_fd.o test4head.o
+CROSS_COMPILE ?= D:\tools\gcc-test\gcc-arm-10.3-2021.07-mingw-w64-i686-aarch64-none-linux-gnu.tar\gcc-arm-10.3-2021.07-mingw-w64-i686-aarch64-none-linux-gnu\binaarch64-linux-gnu-
+CC := ${CROSS_COMPILE}gcc.exe
+LD := ${CROSS_COMPILE}ld.exe
+object = transelect.o test4head.o
 headtest : ${object}
 	${CC} ${object} -o headtest
 test4head.o : test4head.c
-transmit.o : transmit.c 
-transmit2_one_fd.o : transmit2_one_fd.c 
-transmit2_two_fd.o : transmit2_two_fd.c 
 transelect.o : transelect.c
 clean :
 	rm headtest ${object}

@@ -7,4 +7,4 @@ headtest : ${object}
 test4head.o : test4head.c
 transelect.o : transelect.c
 clean :
-	rm headtest ${object}
+	del headtest ${object}
